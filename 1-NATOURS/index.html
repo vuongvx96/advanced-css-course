@@ -7,30 +7,38 @@
   <meta http-equiv="X-UA-Compatible" content="id=edge" />
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/icon-font.css" />
+  <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
   <title>Natours | Exciting tours for adventurous people</title>
 </head>
 <div class="navigation">
-  <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+  <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
   <label for="navi-toggle" class="navigation__button">
-    <span class="navigation__icon">
-      &nbsp;
-    </span>
+    <span class="navigation__icon"> &nbsp; </span>
   </label>
 
   <div class="navigation__background">&nbsp;</div>
 
   <nav class="navigation__nav">
     <ul class="navigation__list">
-      <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natous</a></li>
-      <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-      <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-      <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-      <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link"><span>01</span>About Natous</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link"><span>02</span>Your benefits</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link"><span>03</span>Popular tours</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link"><span>04</span>Stories</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link"><span>05</span>Book now</a>
+      </li>
     </ul>
   </nav>
 </div>
@@ -84,9 +92,30 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
-            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
-            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
-            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
+            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 1"
+              class="composition__photo composition__photo--p1" />
+            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 2"
+              class="composition__photo composition__photo--p2" />
+            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 3"
+              class="composition__photo composition__photo--p3" />
+            <!-- <img
+                src="img/nat-1-large.jpg"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="img/nat-2-large.jpg"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="img/nat-3-large.jpg"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              /> -->
           </div>
         </div>
       </div>
@@ -343,7 +372,13 @@
 
   <footer class="footer">
     <div class="footer__logo-box">
-      <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+      <picture class="footer__logo">
+        <source srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            " media="(max-width: 37.5em)" />
+        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png" />
+      </picture>
     </div>
     <div class="row">
       <div class="col-1-of-2">
@@ -384,24 +419,34 @@
   <div class="popup" id="popup">
     <div class="popup__content">
       <div class="popup__left">
-        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
+        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
       </div>
       <div class="popup__right">
         <a href="#section-tours" class="popup__close">&times;</a>
-        <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-        <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+        <h2 class="heading-secondary u-margin-bottom-small">
+          Start booking now
+        </h2>
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Important &ndash; Please read these terms before booking
+        </h3>
         <p class="popup__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. A erat nam at lectus urna duis convallis. Ante in nibh mauris cursus mattis. Congue quisque
-          egestas diam in arcu cursus euismod quis viverra. Tempor nec feugiat nisl pretium fusce id velit. Tincidunt
-          tortor aliquam nulla facilisi cras. Erat nam at lectus urna duis convallis convallis tellus id. Accumsan
-          tortor posuere ac ut consequat semper viverra nam. Lectus quam id leo in. Sit amet cursus sit amet dictum sit
-          amet. Eu mi bibendum neque egestas congue quisque egestas. Facilisis gravida neque convallis a cras semper. Et
-          sollicitudin ac orci phasellus egestas tellus. Nibh venenatis cras sed felis eget velit aliquet sagittis.
-          Vitae suscipit tellus mauris a diam. Ultricies tristique nulla aliquet enim tortor at. Vel pretium lectus quam
-          id leo in vitae. Pellentesque habitant morbi tristique senectus. Justo eget magna fermentum iaculis eu non
-          diam phasellus vestibulum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. A erat
+          nam at lectus urna duis convallis. Ante in nibh mauris cursus
+          mattis. Congue quisque egestas diam in arcu cursus euismod quis
+          viverra. Tempor nec feugiat nisl pretium fusce id velit. Tincidunt
+          tortor aliquam nulla facilisi cras. Erat nam at lectus urna duis
+          convallis convallis tellus id. Accumsan tortor posuere ac ut
+          consequat semper viverra nam. Lectus quam id leo in. Sit amet cursus
+          sit amet dictum sit amet. Eu mi bibendum neque egestas congue
+          quisque egestas. Facilisis gravida neque convallis a cras semper. Et
+          sollicitudin ac orci phasellus egestas tellus. Nibh venenatis cras
+          sed felis eget velit aliquet sagittis. Vitae suscipit tellus mauris
+          a diam. Ultricies tristique nulla aliquet enim tortor at. Vel
+          pretium lectus quam id leo in vitae. Pellentesque habitant morbi
+          tristique senectus. Justo eget magna fermentum iaculis eu non diam
+          phasellus vestibulum.
         </p>
         <a href="#" class="btn btn--green">Book now</a>
       </div>
